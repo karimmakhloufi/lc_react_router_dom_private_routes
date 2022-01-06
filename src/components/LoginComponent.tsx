@@ -15,6 +15,7 @@ const LoginComponent = () => {
 
   useEffect(() => {
     if (isLoggedIn) {
+      localStorage.setItem("user", "token12345azerty");
       navigate(state.to);
     }
   }, [isLoggedIn]);
