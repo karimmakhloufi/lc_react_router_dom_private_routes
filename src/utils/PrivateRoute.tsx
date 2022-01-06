@@ -1,12 +1,11 @@
 import { useLocation, Navigate } from "react-router-dom";
 
 const PrivateRoute = (props: any) => {
-  console.log(useLocation()); // we have access to the location before we return something
-  console.log(props);
+  const { pathname } = useLocation(); // we have access to the location before we return something
   if (props.isLoggedIn) {
     return props.children;
   } else {
-    return <Navigate to={"/login"} />;
+    return <Navigate to={"/login"} state={{ to: pathname }} />;
   }
 };
 

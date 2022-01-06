@@ -17,7 +17,12 @@ function App() {
         <Route path={"/home"} element={<HomeComponent />} />
         <Route
           path={"/login"}
-          element={<LoginComponent handleLogin={setIsLoggedIn} />}
+          element={
+            <LoginComponent
+              handleLogin={setIsLoggedIn}
+              isLoggedIn={isLoggedIn}
+            />
+          }
         />
         <Route
           path={"/profile"}
