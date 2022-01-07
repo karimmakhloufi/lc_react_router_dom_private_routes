@@ -10,7 +10,6 @@ interface State {
 const LoginComponent = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
   const state = useLocation().state as State;
-  console.log("state", state);
   const navigate = useNavigate();
 
   useEffect(() => {
