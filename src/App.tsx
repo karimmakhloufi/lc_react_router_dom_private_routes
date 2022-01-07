@@ -14,10 +14,10 @@ function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <Link to="/home">Home</Link> <Link to="/profile">Profile</Link>{" "}
+        <Link to="/">Home</Link> <Link to="/profile">Profile</Link>{" "}
         <LogoutComponent />
         <Routes>
-          <Route path={"/home"} element={<HomeComponent />} />
+          <Route path={"/"} element={<HomeComponent />} />
           <Route path={"/login"} element={<LoginComponent />} />
           <Route
             path={"/profile"}

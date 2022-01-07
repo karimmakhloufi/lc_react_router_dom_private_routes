@@ -8,7 +8,7 @@ const LogoutComponent = () => {
   return isLoggedIn ? (
     <button
       onClick={() => {
-        navigate("/home");
+        navigate("/");
         localStorage.removeItem("user");
         setIsLoggedIn(false);
       }}
