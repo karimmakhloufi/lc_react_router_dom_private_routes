@@ -3,14 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../utils/AuthContext";
 
 const LogoutComponent = () => {
-  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
+  const { user, setUser } = useContext(AuthContext);
   const navigate = useNavigate();
-  return isLoggedIn ? (
+  return user ? (
     <button
       onClick={() => {
         navigate("/");
-        localStorage.removeItem("user");
-        setIsLoggedIn(false);
+        localStorage.removeItem("jwt");
+        setUser(null);
       }}
     >
       Logout
